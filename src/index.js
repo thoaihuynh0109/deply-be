@@ -1,11 +1,19 @@
+require("./configs/db.config");
 const express = require("express");
-const app = express();
-const port = 3000;
+const cors = require("cors");
+const route = require("./routes/index.route");
+const morgan = require("morgan");
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+const app = express();
+const port = 3001;
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(morgan("combined"));
+
+route(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Server listening at http://localhost:${port}`);
 });
