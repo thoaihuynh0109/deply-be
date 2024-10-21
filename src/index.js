@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("combined"));
 
-route(app);
+// route(app);
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
