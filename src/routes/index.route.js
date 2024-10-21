@@ -5,7 +5,6 @@ const categoryRouter = require("./category.route");
 const brandRouter = require("./brand.route");
 const orderRouter = require("./order.route");
 const paymentRouter = require("./payment.route");
-const promotionRouter = require("./promotion.route");
 
 function route(app) {
   app.use(`/products`, productRouter);
@@ -16,8 +15,8 @@ function route(app) {
   app.use("/orders", orderRouter);
   app.use("/payments", paymentRouter);
 
-  app.get("/", () => {
-    return "Hello World!";
+  app.get("/", (req, res) => {
+    res.send("Weather Forecast App!!");
   });
 }
 
