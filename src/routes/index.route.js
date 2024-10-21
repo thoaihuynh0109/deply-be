@@ -8,7 +8,7 @@ const paymentRouter = require("./payment.route");
 const promotionRouter = require("./promotion.route");
 
 function route(app) {
-  app.use(`/products`, productRouter);
+  // app.use(`/products`, productRouter);
   // app.use("/auths", authRouter);
   // app.use("/users", userRouter);
   // app.use("/categories", categoryRouter);
