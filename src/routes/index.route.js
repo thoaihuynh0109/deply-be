@@ -11,9 +11,9 @@ function route(app) {
   app.use(`/products`, productRouter);
   // app.use("/auths", authRouter);
   // app.use("/users", userRouter);
-  app.use("/categories", categoryRouter);
-  app.use("/brands", brandRouter);
-  app.use("/orders", orderRouter);
+  // app.use("/categories", categoryRouter);
+  // app.use("/brands", brandRouter);
+  // app.use("/orders", orderRouter);
   // app.use("/payments", paymentRouter);
 
   app.get("/", () => {
