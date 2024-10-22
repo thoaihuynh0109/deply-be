@@ -5,7 +5,7 @@ const categoryRouter = require("./category.route");
 const brandRouter = require("./brand.route");
 const orderRouter = require("./order.route");
 const paymentRouter = require("./payment.route");
-
+const promotionRouter = require('./promotion.route');
 function route(app) {
   app.use(`/products`, productRouter);
   app.use("/auths", authRouter);
@@ -14,6 +14,7 @@ function route(app) {
   app.use("/brands", brandRouter);
   app.use("/orders", orderRouter);
   app.use("/payments", paymentRouter);
+  app.use("/promotions", promotionRouter);
 
   app.use("/", (req, res) => {
     res.send("Weather Forecast App!!");
