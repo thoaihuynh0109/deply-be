@@ -17,7 +17,7 @@ function route(app) {
     app.use('/promotions', promotionRouter);
 
     app.get('/', (req, res) => {
-        return 'Hello World!';
+        res.send('Hello World!');
     });
 }
 
