@@ -15,7 +15,7 @@ function route(app) {
   app.use("/orders", orderRouter);
   app.use("/payments", paymentRouter);
 
-  app.get("/", (req, res) => {
+  app.use("/", (req, res) => {
     res.send("Weather Forecast App!!");
   });
 }
