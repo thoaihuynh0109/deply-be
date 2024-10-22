@@ -14,7 +14,7 @@ function route(app) {
     app.use('/brands', brandRouter);
     app.use('/orders', orderRouter);
     app.use('/payments', paymentRouter);
-    app.use('/promotions', promotionRouter);
+    // app.use('/promotions', promotionRouter);
 
     app.get('/', (req, res) => {
         res.send('Hello World!');
